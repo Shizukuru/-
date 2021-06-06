@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		/* Javascript 샘플 코드 */
+
+		var xhr = new XMLHttpRequest();
+		var url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'; /*URL*/
+		var queryParams = '?'
+				+ encodeURIComponent('ServiceKey')
+				+ '='
+				+ 'cXagt+45qVBH6Yt5GGoPgRx2APrVdW8zLHa2olJI6oyYp4r+E8i6UJVX2m9cpbgBqCxKtde7yZJsD+pxserf6w=='; /*Service Key*/
+		queryParams += '&' + encodeURIComponent('pageNo') + '='
+				+ encodeURIComponent('1'); /**/
+		queryParams += '&' + encodeURIComponent('numOfRows') + '='
+				+ encodeURIComponent('10'); /**/
+		queryParams += '&' + encodeURIComponent('startCreateDt') + '='
+				+ encodeURIComponent('20210604'); /**/
+		queryParams += '&' + encodeURIComponent('endCreateDt') + '='
+				+ encodeURIComponent('20210604'); /**/
+		xhr.open('GET', url + queryParams);
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4) {
+				alert('Status: ' + this.status + 'nHeaders: '
+						+ JSON.stringify(this.getAllResponseHeaders())
+						+ 'nBody: ' + this.responseText);
+			}
+		};
+
+		xhr.send('');
+	</script>
+
+
+</body>
+</html>

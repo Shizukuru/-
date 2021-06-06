@@ -1,12 +1,5 @@
 @charset "EUC-KR";
 
-.s_title_1 {
-	font-size: 25px;
-	line-height: 28px;
-	color: #405985;
-	margin-top: 32px;
-}
-
 [class*="tbl_scrl_"] {
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -347,11 +340,19 @@ a, button, input[type="submit"] {
 
 .regional_step_status .rss_detail::before {
 	min-height: 612px;
+	display: block;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -4px;
+	width: 1px;
+	height: 100%;
+	background-color: #efefef;
+	z-index: 2;
 }
 
 .regional_step_status .rss_detail>div>div {
 	display: none;
-	
 }
 
 .regional_step_status .rss_detail .rssd_title_1 {
@@ -368,17 +369,19 @@ a, button, input[type="submit"] {
 	padding-left: 22px;
 }
 
-.regional_step_status .rss_detail .rssd_title_2[data-step="2"]::before {
+.rssd_title_2[data-step="2"]::before {
 	background: #ffb911;
 }
 
-.regional_step_status .rss_detail .rssd_title_2[data-step="1.5"]::before
+.rssd_title_2[data-step="1.5"]::before
 	{
 	background: #4088da;
 }
+
 .regional_step_status .rss_detail .rssd_title_2[data-step="1"]::before {
-    background: #d2f0fb;
+	background: #d2f0fb;
 }
+
 .regional_step_status .rss_detail .rssd_title_2[data-step="1"]::before,
 	.regional_step_status .rss_detail .rssd_title_2[data-step="1.5"]::before,
 	.regional_step_status .rss_detail .rssd_title_2[data-step="2"]::before,
@@ -405,27 +408,31 @@ a, button, input[type="submit"] {
 	color: #666;
 	padding: 1px 0;
 }
-.regional_step_status .rss_detail > div > div.open {
-    display: block;
+
+.regional_step_status .rss_detail>div>div.open {
+	display: block;
 }
+
 .btn_top {
-    width: 40px;
-    height: 40px;
-    border: 1px solid #c1c1c1;
-    border-left: 1px solid #e1e1e1;
-    border-top: 1px solid #e1e1e1;
-    background: url(header_icon.png) no-repeat #fdfdfd -120px -50px;
-    right: 16px;
-    display: none;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #c1c1c1;
+	border-left: 1px solid #e1e1e1;
+	border-top: 1px solid #e1e1e1;
+	background: url(header_icon.png) no-repeat #fdfdfd -120px -50px;
+	right: 16px;
+	display: none;
 }
+
 .hdn {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
 }
+
 a, a:focus, a:hover {
-    text-decoration: none;
+	text-decoration: none;
 }

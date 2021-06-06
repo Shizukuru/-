@@ -1,45 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-
-<script type="text/javascript">
-	/* Javascript 샘플 코드 */
-
-	var xhr = new XMLHttpRequest();
-	var url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'; /*URL*/
-	var queryParams = '?'
-			+ encodeURIComponent('ServiceKey')
-			+ '='
-			+ 'cXagt%2B45qVBH6Yt5GGoPgRx2APrVdW8zLHa2olJI6oyYp4r%2BE8i6UJVX2m9cpbgBqCxKtde7yZJsD%2Bpxserf6w%3D%3D'; /*Service Key*/
-	queryParams += '&' + encodeURIComponent('pageNo') + '='
-			+ encodeURIComponent('1'); /**/
-	queryParams += '&' + encodeURIComponent('numOfRows') + '='
-			+ encodeURIComponent('10'); /**/
-	queryParams += '&' + encodeURIComponent('startCreateDt') + '='
-			+ encodeURIComponent('20210604'); /**/
-	queryParams += '&' + encodeURIComponent('endCreateDt') + '='
-			+ encodeURIComponent('20210604'); /**/
-	xhr.open('GET', url + queryParams);
-	xhr.onreadystatechange = function() {
-		if (this.readyState == 4) {
-			alert('Status: ' + this.status + 'nHeaders: '
-					+ JSON.stringify(this.getAllResponseHeaders()) + 'nBody: '
-					+ this.responseText);
-		}
-	};
-
-	xhr.send('');
-</script>
-
 <meta charset="EUC-KR">
-<title>코로나예약홈페이지</title>
+<title>코로나현황JSP</title>
+
 <style type="text/css">
 @import "CSS20161552.css";
 
 @import "CSS20162552_2.css";
 </style>
-
 </head>
+
 <body>
 	<header id="header"></header>
 	<nav>
